@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayan Singha - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Sayan Singha</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <h1>Hi, I'm <span class="highlight">Sayan Singha</span></h1>
+                    <p class="hero-subtitle">B.Tech CSE Student | Full stack Developer</p>
+                    <p class="hero-description">Building scalable full-stack applications using MongoDB, Express.js, React, and Node.js, backed by strong DSA fundamentals.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="https://github.com/SayanDcodeR" target="_blank" class="btn btn-secondary">View Projects</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="mailto:sayan2212005@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://linkedin.com/in/sayan-singha-829925327" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/SayanDcodeR" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="hero-photo-wrap">
+                    <div class="hero-photo-ring">
+                        <!-- Replace src="" with src="your-photo.jpg" when ready -->
+                        <img src="profilePic.jpg" alt="Sayan Singha" class="hero-photo" id="heroPhoto"
+                             onerror="this.style.display='none';document.getElementById('heroInitials').style.display='flex';" />
+                    </div>
+                    <div class="hero-photo-badge">
+                        <i class="fas fa-map-marker-alt"></i> Kolkata, India
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a B.Tech Computer Science and Engineering student at Kalinga Institute of Industrial Technology (KIIT) with a CGPA of 8.96. I have strong programming fundamentals in Java, C, and Python, along with hands-on experience in building responsive and intuitive interfaces using React.js and JavaScript.</p>
+                    <p>My passion lies in creating impactful digital solutions that solve real-world problems. I recently ranked 6th out of 520 teams in Smart India Hackathon 2025 with my civic issue reporting platform, JanMitra.</p>
+                </div>
+                <div class="education">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>B.Tech in Computer Science and Engineering</h4>
+                        <p class="institution">Kalinga Institute of Industrial Technology (KIIT)</p>
+                        <p class="duration">2023 – Present</p>
+                        <p class="grade">CGPA: 8.96</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Higher Secondary</h4>
+                        <p class="institution">Satish Chandra Memorial School</p>
+                        <p class="duration">2023</p>
+                        <p class="grade">Percentage: 82%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <!-- <span class="skill-tag">TypeScript</span> -->
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Core CS</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">OS</span>
+                        <span class="skill-tag">CN</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Web Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">React.js</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> DevOps &amp; Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VSCode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>JanMitra</h3>
+                    <p class="project-subtitle">Civic Issue Reporting Platform</p>
+                    <p class="project-description">Designed and developed the frontend architecture using React.js, Tailwind CSS, and JavaScript. Implemented an intuitive one-click issue reporting interface with real-time feedback and responsive layouts.</p>
+                    <div class="project-achievement">
+                        <i class="fas fa-trophy"></i>
+                        <span>Ranked 6/520 Teams - Smart India Hackathon 2025</span>
+                    </div>
+                    <div class="project-tags">
+                        <span>React.js</span>
+                        <span>Tailwind CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular & Certifications -->
+    <section id="extracurricular" class="experience">
+        <div class="container">
+            <div class="experience-grid">
+                <div class="experience-section">
+                    <h2 class="section-title">Extracurricular</h2>
+                    <div class="experience-card">
+                        <h3>NSS Volunteer</h3>
+                        <p class="organization">National Service Scheme</p>
+                        <p class="duration">2024 – 2025</p>
+                        <ul>
+                            <li>Led and participated in community development activities including cleanliness drives and awareness campaigns</li>
+                            <li>Coordinated events ensuring smooth execution and teamwork</li>
+                            <li>Gained valuable leadership, organizational, and communication skills through active social outreach</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="certifications-section">
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4>Learn DevOps - The Complete Kubernetes Course</h4>
+                            <p>Udemy - 2025</p>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <i class="fas fa-certificate"></i>
+                        <div>
+                            <h4>Oracle Cloud Infrastructure 2025 AI Foundations Associate</h4>
+                            <p>Oracle - 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="contact-subtitle">Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <a href="mailto:sayan2212005@gmail.com">sayan2212005@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <a href="tel:+919563136848">+91 9563136848</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Kolkata, West Bengal</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <a href="https://linkedin.com/in/sayan-singha-829925327" target="_blank">linkedin.com/in/sayan-singha-829925327</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Sayan Singha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ── Dark mode toggle ──
+        var themeBtn  = document.getElementById('themeBtn');
+        var themeIcon = document.getElementById('themeIcon');
+        var htmlEl    = document.documentElement;
+
+        function applyTheme(t) {
+            htmlEl.setAttribute('data-theme', t);
+            localStorage.setItem('ss-theme', t);
+            themeIcon.className = (t === 'dark') ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Load saved preference
+        applyTheme(localStorage.getItem('ss-theme') || 'light');
+
+        themeBtn.addEventListener('click', function () {
+            var next = (htmlEl.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+            applyTheme(next);
+        });
+
+        // ── Mobile hamburger ──
+        var hamburger = document.getElementById('hamburger');
+        var navLinks  = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', function () {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+
+        // ── Sticky nav shadow ──
+        window.addEventListener('scroll', function () {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
+        });
+    </script>
+
+</body>
+</html>
