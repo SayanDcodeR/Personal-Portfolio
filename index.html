@@ -9,16 +9,24 @@
 </head>
 <body>
 
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="container">
             <div class="logo">Sayan Singha</div>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-right">
                 <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">
@@ -39,23 +47,25 @@
             <div class="hero-layout">
                 <div class="hero-content">
                     <h1>Hi, I'm <span class="highlight">Sayan Singha</span></h1>
-                    <p class="hero-subtitle">B.Tech CSE Student | Full stack Developer</p>
+                    <p class="hero-subtitle">
+                        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+                    </p>
                     <p class="hero-description">Building scalable full-stack applications using MongoDB, Express.js, React, and Node.js, backed by strong DSA fundamentals.</p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="https://github.com/SayanDcodeR" target="_blank" class="btn btn-secondary">View Projects</a>
                     </div>
                     <div class="social-links">
-                        <a href="mailto:sayan2212005@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="javascript:void(0)" onclick="window.location='mai'+'lto:sayan2212005@gma'+'il.com'" title="Email"><i class="fas fa-envelope"></i></a>
                         <a href="https://linkedin.com/in/sayan-singha-829925327" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/SayanDcodeR" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 <div class="hero-photo-wrap">
                     <div class="hero-photo-ring">
-                        <!-- Replace src="" with src="your-photo.jpg" when ready -->
                         <img src="profilePic.jpg" alt="Sayan Singha" class="hero-photo" id="heroPhoto"
                              onerror="this.style.display='none';document.getElementById('heroInitials').style.display='flex';" />
+                        <div class="hero-initials" id="heroInitials" style="display:none;">SS</div>
                     </div>
                     <div class="hero-photo-badge">
                         <i class="fas fa-map-marker-alt"></i> Kolkata, India
@@ -68,21 +78,23 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a B.Tech Computer Science and Engineering student at Kalinga Institute of Industrial Technology (KIIT) with a CGPA of 8.96. I have strong programming fundamentals in Java, C, and Python, along with hands-on experience in building responsive and intuitive interfaces using React.js and JavaScript.</p>
-                    <p>My passion lies in creating impactful digital solutions that solve real-world problems. I recently ranked 6th out of 520 teams in Smart India Hackathon 2025 with my civic issue reporting platform, JanMitra.</p>
+                <div class="about-text slide-in-left">
+                    <p>Third-year B.Tech Computer Science student specializing in Data Structures and Full-Stack Development. Ranked
+6th out of 520 teams at Smart India Hackathon 2025 (Internal Round). Experienced in designing RESTful APIs
+and building scalable web applications using React.js, Node.js, Express, and MongoDB.</p>
+                    <p>Continuously learning, building, and striving to grow as a software engineer, with a strong commitment to improving my problem-solving abilities and delivering well-structured, impactful solutions.</p>
                 </div>
-                <div class="education">
+                <div class="education slide-in-right">
                     <h3>Education</h3>
-                    <div class="education-item">
+                    <div class="education-item fade-in">
                         <h4>B.Tech in Computer Science and Engineering</h4>
                         <p class="institution">Kalinga Institute of Industrial Technology (KIIT)</p>
                         <p class="duration">2023 – Present</p>
                         <p class="grade">CGPA: 8.96</p>
                     </div>
-                    <div class="education-item">
+                    <div class="education-item fade-in">
                         <h4>Higher Secondary</h4>
                         <p class="institution">Satish Chandra Memorial School</p>
                         <p class="duration">2023</p>
@@ -96,19 +108,18 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
+            <h2 class="section-title fade-in">Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-code"></i> Languages</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Java</span>
                         <span class="skill-tag">C</span>
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">JavaScript</span>
-                        <!-- <span class="skill-tag">TypeScript</span> -->
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-brain"></i> Core CS</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Data Structures</span>
@@ -119,7 +130,7 @@
                         <span class="skill-tag">CN</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-globe"></i> Web Technologies</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">HTML</span>
@@ -130,7 +141,7 @@
                         <span class="skill-tag">Express.js</span>
                     </div>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category fade-in">
                     <h3><i class="fas fa-tools"></i> DevOps &amp; Tools</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Docker</span>
@@ -148,24 +159,30 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title fade-in">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card fade-in">
                     <div class="project-icon">
                         <i class="fas fa-bullhorn"></i>
                     </div>
                     <h3>JanMitra</h3>
                     <p class="project-subtitle">Civic Issue Reporting Platform</p>
-                    <p class="project-description">Designed and developed the frontend architecture using React.js, Tailwind CSS, and JavaScript. Implemented an intuitive one-click issue reporting interface with real-time feedback and responsive layouts.</p>
+                    <p class="project-description">Developed a scalable full-stack civic
+engagement platform using React.js, Tailwind CSS, Node.js, Express, and MongoDB. Implemented RESTful
+API integration, secure authentication, and interactive mapping with Mapbox and Leaflet.js. Managed backend
+data flow, version control via Git, and responsive cross-device design for performance optimization and usability.</p>
                     <div class="project-achievement">
                         <i class="fas fa-trophy"></i>
-                        <span>Ranked 6/520 Teams - Smart India Hackathon 2025</span>
+                        <span>Ranked 6/520 Teams - Smart India Hackathon 2025 (Internal Round)</span>
                     </div>
                     <div class="project-tags">
                         <span>React.js</span>
                         <span>Tailwind CSS</span>
                         <span>JavaScript</span>
                     </div>
+                    <a href="https://github.com/SayanDcodeR" target="_blank" class="project-github-btn">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
                 </div>
             </div>
         </div>
@@ -176,8 +193,8 @@
         <div class="container">
             <div class="experience-grid">
                 <div class="experience-section">
-                    <h2 class="section-title">Extracurricular</h2>
-                    <div class="experience-card">
+                    <h2 class="section-title fade-in">Extracurricular</h2>
+                    <div class="experience-card slide-in-left">
                         <h3>NSS Volunteer</h3>
                         <p class="organization">National Service Scheme</p>
                         <p class="duration">2024 – 2025</p>
@@ -189,15 +206,15 @@
                     </div>
                 </div>
                 <div class="certifications-section">
-                    <h2 class="section-title">Certifications</h2>
-                    <div class="cert-card">
+                    <h2 class="section-title fade-in">Certifications</h2>
+                    <div class="cert-card slide-in-right">
                         <i class="fas fa-certificate"></i>
                         <div>
                             <h4>Learn DevOps - The Complete Kubernetes Course</h4>
                             <p>Udemy - 2025</p>
                         </div>
                     </div>
-                    <div class="cert-card">
+                    <div class="cert-card slide-in-right">
                         <i class="fas fa-certificate"></i>
                         <div>
                             <h4>Oracle Cloud Infrastructure 2025 AI Foundations Associate</h4>
@@ -212,31 +229,31 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-subtitle">Feel free to reach out for collaborations, opportunities, or just to connect!</p>
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="contact-subtitle fade-in">Feel free to reach out for collaborations, opportunities, or just to connect!</p>
             <div class="contact-info">
-                <div class="contact-item">
+                <div class="contact-item fade-in" id="emailItem">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <h4>Email</h4>
-                        <a href="mailto:sayan2212005@gmail.com">sayan2212005@gmail.com</a>
+                        <h4>Email <span class="copy-hint"></span></h4>
+                        <span id="emailText">sayan2212005&#64;gmail.com</span>
                     </div>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item fade-in" id="phoneItem">
                     <i class="fas fa-phone"></i>
                     <div>
-                        <h4>Phone</h4>
-                        <a href="tel:+919563136848">+91 9563136848</a>
+                        <h4>Phone <span class="copy-hint"></span></h4>
+                        <span>+91 9563136848</span>
                     </div>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item fade-in">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>Location</h4>
                         <p>Kolkata, West Bengal</p>
                     </div>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item fade-in">
                     <i class="fab fa-linkedin"></i>
                     <div>
                         <h4>LinkedIn</h4>
@@ -244,57 +261,133 @@
                     </div>
                 </div>
             </div>
+            <div class="toast" id="toast">Copied to clipboard!</div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Sayan Singha. All rights reserved.</p>
+            <p>&copy; 2024 Sayan Singha. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // ── Dark mode toggle ──
-        var themeBtn  = document.getElementById('themeBtn');
-        var themeIcon = document.getElementById('themeIcon');
-        var htmlEl    = document.documentElement;
+    // 1. DARK MODE
+    var themeBtn  = document.getElementById('themeBtn');
+    var themeIcon = document.getElementById('themeIcon');
+    var htmlEl    = document.documentElement;
+    function applyTheme(t) {
+        htmlEl.setAttribute('data-theme', t);
+        localStorage.setItem('ss-theme', t);
+        themeIcon.className = (t === 'dark') ? 'fas fa-sun' : 'fas fa-moon';
+    }
+    applyTheme(localStorage.getItem('ss-theme') || 'light');
+    themeBtn.addEventListener('click', function() {
+        applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    });
 
-        function applyTheme(t) {
-            htmlEl.setAttribute('data-theme', t);
-            localStorage.setItem('ss-theme', t);
-            themeIcon.className = (t === 'dark') ? 'fas fa-sun' : 'fas fa-moon';
+    // 2. HAMBURGER
+    var hamburger = document.getElementById('hamburger');
+    var navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+    navLinks.querySelectorAll('a').forEach(function(a) {
+        a.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+
+    // 3. SCROLL PROGRESS
+    window.addEventListener('scroll', function() {
+        var st = document.documentElement.scrollTop || document.body.scrollTop;
+        var sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        document.getElementById('scrollProgress').style.width = (sh > 0 ? (st/sh)*100 : 0) + '%';
+    });
+
+    // 4. STICKY NAV + ACTIVE LINKS + BACK TO TOP
+    var navbar     = document.getElementById('navbar');
+    var sections   = document.querySelectorAll('section[id]');
+    var navLinkEls = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', function() {
+        var scrollY = window.scrollY;
+        navbar.classList.toggle('scrolled', scrollY > 10);
+        document.getElementById('backToTop').classList.toggle('visible', scrollY > 400);
+        var current = '';
+        sections.forEach(function(sec) {
+            if (scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
+        });
+        navLinkEls.forEach(function(link) {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+        });
+    });
+
+    // 5. BACK TO TOP
+    document.getElementById('backToTop').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // 6. TYPING EFFECT
+    var phrases   = ['B.Tech CSE Student','Full Stack Developer','MERN Stack Developer','DSA Enthusiast'];
+    var typedEl   = document.getElementById('typedText');
+    var phraseIdx = 0, charIdx = 0, deleting = false;
+    function type() {
+        var current = phrases[phraseIdx];
+        if (!deleting) {
+            typedEl.textContent = current.slice(0, ++charIdx);
+            if (charIdx === current.length) { deleting = true; setTimeout(type, 1800); return; }
+        } else {
+            typedEl.textContent = current.slice(0, --charIdx);
+            if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
         }
+        setTimeout(type, deleting ? 60 : 100);
+    }
+    type();
 
-        // Load saved preference
-        applyTheme(localStorage.getItem('ss-theme') || 'light');
-
-        themeBtn.addEventListener('click', function () {
-            var next = (htmlEl.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
-            applyTheme(next);
+    // 7. SCROLL REVEAL
+    var revealEls = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
+    var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
         });
+    }, { threshold: 0.1 });
+    revealEls.forEach(function(el) { io.observe(el); });
 
-        // ── Mobile hamburger ──
-        var hamburger = document.getElementById('hamburger');
-        var navLinks  = document.getElementById('navLinks');
-
-        hamburger.addEventListener('click', function () {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
+    // 8. COPY TO CLIPBOARD
+    function copyText(text, el) {
+        navigator.clipboard.writeText(text).then(function() {
+            var toast = document.getElementById('toast');
+            toast.classList.add('show');
+            el.classList.add('copied');
+            setTimeout(function() { toast.classList.remove('show'); el.classList.remove('copied'); }, 2000);
         });
+    }
+    document.getElementById('emailItem').addEventListener('click', function() {
+        copyText(document.getElementById('emailText').textContent, this);
+    });
+    document.getElementById('phoneItem').addEventListener('click', function() {
+        copyText('+919563136848', this);
+    });
 
-        navLinks.querySelectorAll('a').forEach(function (a) {
-            a.addEventListener('click', function () {
-                navLinks.classList.remove('active');
-                hamburger.classList.remove('active');
-            });
+    // 9. SKILL TAG POP
+    document.querySelectorAll('.skill-tag').forEach(function(tag) {
+        tag.addEventListener('click', function() {
+            tag.classList.add('popped');
+            setTimeout(function() { tag.classList.remove('popped'); }, 300);
         });
+    });
 
-        // ── Sticky nav shadow ──
-        window.addEventListener('scroll', function () {
-            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
-        });
+    // 10. PHOTO FALLBACK - show initials if no photo
+    var heroPhoto = document.getElementById('heroPhoto');
+    var heroInitials = document.getElementById('heroInitials');
+    if (!heroPhoto.src || heroPhoto.src === window.location.href) {
+        heroPhoto.style.display = 'none';
+        heroInitials.style.display = 'flex';
+    }
     </script>
-
 </body>
 </html>
