@@ -1,393 +1,464 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sayan Singha - Portfolio</title>
+    <title>Sayan Singha</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress" id="scrollProgress"></div>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+    <!-- Animated Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
 
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar">
         <div class="container">
-            <div class="logo">Sayan Singha</div>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+            <a href="#home" class="logo">Sayan Singha</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#extracurricular">Extracurricular</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="theme-toggle" title="Toggle Light/Dark Mode"><i class="fas fa-sun"></i></a></li>
             </ul>
-            <div class="nav-right">
-                <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon" id="themeIcon"></i>
-                </button>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-layout">
-                <div class="hero-content">
-                    <h1>Hi, I'm <span class="highlight">Sayan Singha</span></h1>
-                    <p class="hero-subtitle">
-                        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
-                    </p>
-                    <p class="hero-description">Building scalable full-stack applications using MongoDB, Express.js, React, and Node.js, backed by strong DSA fundamentals.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="https://github.com/SayanDcodeR" target="_blank" class="btn btn-secondary">View Projects</a>
-                    </div>
-                    <div class="social-links">
-                        <a href="javascript:void(0)" onclick="window.location='mai'+'lto:sayan2212005@gma'+'il.com'" title="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://linkedin.com/in/sayan-singha-829925327" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/SayanDcodeR" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <div class="hero-photo-wrap">
-                    <div class="hero-photo-ring">
-                        <img src="profilePic.jpg" alt="Sayan Singha" class="hero-photo" id="heroPhoto"
-                             onerror="this.style.display='none';document.getElementById('heroInitials').style.display='flex';" />
-                        <div class="hero-initials" id="heroInitials" style="display:none;">SS</div>
-                    </div>
-                    <div class="hero-photo-badge">
-                        <i class="fas fa-map-marker-alt"></i> Kolkata, India
-                    </div>
-                </div>
+        <div class="container hero-content">
+            <img src="profilePic.jpg" alt="Sayan Singha" class="profile-pic"
+                onerror="this.src='https://ui-avatars.com/api/?name=Sayan+Singha&background=06b6d4&color=fff&size=120'">
+            <h1>Sayan Singha</h1>
+            <h2>Full Stack Developer | B.Tech CSE Student</h2>
+            <p>Building scalable full-stack applications with clean architecture, RESTful APIs, and modern web
+                technologies like React and Node.js.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="Sayan_Singha_Resume.pdf" class="btn btn-outline"><i class="fas fa-download"></i> Download
+                    Resume</a>
             </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about">
         <div class="container">
-            <h2 class="section-title fade-in">About Me</h2>
-            <div class="about-content">
-                <div class="about-text slide-in-left">
-                    <p>Third-year B.Tech Computer Science student specializing in Data Structures and Full-Stack Development. Ranked
-6th out of 520 teams at Smart India Hackathon 2025 (Internal Round). Experienced in designing RESTful APIs
-and building scalable web applications using React.js, Node.js, Express, and MongoDB.</p>
-                    <p>Continuously learning, building, and striving to grow as a software engineer, with a strong commitment to improving my problem-solving abilities and delivering well-structured, impactful solutions.</p>
+            <h2 class="section-title">About Me</h2>
+            <div class="card about-top">
+                <p>I am a third-year B.Tech Computer Science student specializing in Data Structures and Full-Stack
+                    Development, ranked 6th out of 520 teams at the Smart India Hackathon 2025 (Internal Round).
+                    Experienced in designing RESTful APIs and building scalable web applications using React.js,
+                    Node.js, Express, and MongoDB.</p>
+            </div>
+            <div class="about-bottom">
+                <div class="card about-stat">
+                    <div class="stat-header">
+                        <i class="fas fa-award stat-icon"></i>
+                        <h3>Smart India Hackathon</h3>
+                    </div>
+                    <p>Ranked 6th out of 520 teams in SIH 2025(Internal Round)</p>
                 </div>
-                <div class="education slide-in-right">
-                    <h3>Education</h3>
-                    <div class="education-item fade-in">
-                        <h4>B.Tech in Computer Science and Engineering</h4>
-                        <p class="institution">Kalinga Institute of Industrial Technology (KIIT)</p>
-                        <p class="duration">2023 – Present</p>
-                        <p class="grade">CGPA: 8.96</p>
+                <div class="card about-stat">
+                    <div class="stat-header">
+                        <i class="fas fa-chart-line stat-icon"></i>
+                        <h3>Academic Excellence</h3>
                     </div>
-                    <div class="education-item fade-in">
-                        <h4>Higher Secondary</h4>
-                        <p class="institution">Satish Chandra Memorial School</p>
-                        <p class="duration">2023</p>
-                        <p class="grade">Percentage: 82%</p>
-                    </div>
+                    <p>CGPA: 8.96</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills">
         <div class="container">
-            <h2 class="section-title fade-in">Technical Skills</h2>
+            <h2 class="section-title">Skills & Technologies</h2>
             <div class="skills-grid">
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-code"></i> Languages</h3>
+
+                <div class="card skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">JavaScript</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-brain"></i> Core CS</h3>
+
+                <div class="card skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Web Technologies</h3>
+                    </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Data Structures</span>
-                        <span class="skill-tag">Algorithms</span>
-                        <span class="skill-tag">OOP</span>
-                        <span class="skill-tag">DBMS</span>
-                        <span class="skill-tag">OS</span>
-                        <span class="skill-tag">CN</span>
+                        <span class="tag">React.js</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express.js</span>
+                        <span class="tag">Tailwind CSS</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-globe"></i> Web Technologies</h3>
+
+                <div class="card skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">Bootstrap</span>
-                        <span class="skill-tag">React.js</span>
-                        <span class="skill-tag">Tailwind CSS</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">Express.js</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">MySQL</span>
                     </div>
                 </div>
-                <div class="skill-category fade-in">
-                    <h3><i class="fas fa-tools"></i> DevOps &amp; Tools</h3>
+
+                <div class="card skill-card">
+                    <div class="skill-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & DevOps</h3>
+                    </div>
                     <div class="skill-tags">
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">VSCode</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="projects">
         <div class="container">
-            <h2 class="section-title fade-in">Featured Projects</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card fade-in">
-                    <div class="project-icon">
-                        <i class="fas fa-bullhorn"></i>
-                    </div>
+
+                <div class="card project-card">
                     <h3>JanMitra</h3>
-                    <p class="project-subtitle">Civic Issue Reporting Platform</p>
-                    <p class="project-description">Developed a scalable full-stack civic
-engagement platform using React.js, Tailwind CSS, Node.js, Express, and MongoDB. Implemented RESTful
-API integration, secure authentication, and interactive mapping with Mapbox and Leaflet.js. Managed backend
-data flow, version control via Git, and responsive cross-device design for performance optimization and usability.</p>
-                    <div class="project-achievement">
-                        <i class="fas fa-trophy"></i>
-                        <span>Ranked 6/520 Teams - Smart India Hackathon 2025 (Internal Round)</span>
+                    <p>Smart India Hackathon 2024 project that secured 6th rank out of 520 teams. A comprehensive
+                        citizen engagement platform connecting citizens with government services.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Mapbox</span>
+                        <span class="tech-tag">Leaflet.js</span>
+                        <span class="tech-tag">RESTful API</span>
                     </div>
-                    <div class="project-tags">
-                        <span>HTML</span>
-                        <span>Tailwind CSS</span>
-                        <span>JavaScript</span>
+                    <div class="project-links">
+                        <a href="https://github.com/SayanDcodeR/JanMitra" target="_blank"><i class="fab fa-github"></i>
+                            Code</a>
+                        <a href="https://janmitra.onrender.com/" target="_blank"><i
+                                class="fas fa-external-link-alt"></i> Live Demo</a>
                     </div>
-                    <a href="https://github.com/SayanDcodeR/JanMitra" target="_blank" class="project-github-btn">
-                        <i class="fab fa-github"></i> View on GitHub
-                    </a>
                 </div>
+
+                <div class="card project-card">
+                    <h3>TastyBite</h3>
+                    <p>A full-featured restaurant management system with online ordering, table reservations, and
+                        real-time order tracking. Built for seamless customer and admin experiences.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">React.js</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Clerk</span>
+                        <span class="tech-tag">Recharts</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SayanDcodeR/TastyBite" target="_blank"><i class="fab fa-github"></i>
+                            Code</a>
+                    </div>
+                </div>
+
+                <div class="card project-card">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>Modern, responsive portfolio website showcasing projects, skills, and professional achievements
+                        with smooth animations and clean UI.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS </span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/SayanDcodeR/Personal-Portfolio" target="_blank"><i
+                                class="fab fa-github"></i> Code</a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Extracurricular & Certifications -->
-    <section id="extracurricular" class="experience">
+    <!-- Certifications Section -->
+    <section id="certifications">
         <div class="container">
-            <div class="experience-grid">
-                <div class="experience-section">
-                    <h2 class="section-title fade-in">Extracurricular</h2>
-                    <div class="experience-card slide-in-left">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certs-grid">
+
+                <div class="card cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h3>Oracle Cloud AI Foundations</h3>
+                    <p>Oracle</p>
+                    <p class="cert-year">2025</p>
+                </div>
+
+                <div class="card cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h3>Kubernetes Course</h3>
+                    <p>Udemy</p>
+                    <p class="cert-year">2024</p>
+                </div>
+
+                <div class="card cert-card">
+                    <i class="fas fa-certificate cert-icon"></i>
+                    <h3>Git Version Control</h3>
+                    <p>Simplilearn</p>
+                    <p class="cert-year">2024</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Section -->
+    <section id="extracurricular">
+        <div class="container">
+            <h2 class="section-title">Extracurricular Activities</h2>
+            <div class="card extra-card">
+                <div class="extra-header">
+                    <div class="extra-icon"><i class="fas fa-users"></i></div>
+                    <div class="extra-info">
                         <h3>NSS Volunteer</h3>
-                        <p class="organization">National Service Scheme</p>
-                        <p class="duration">2024 – 2025</p>
-                        <ul>
-                            <li>Led and participated in community development activities including cleanliness drives and awareness campaigns</li>
-                            <li>Coordinated events ensuring smooth execution and teamwork</li>
-                            <li>Gained valuable leadership, organizational, and communication skills through active social outreach</li>
-                        </ul>
+                        <p>2024 - 2025</p>
                     </div>
                 </div>
-                <div class="certifications-section">
-                    <h2 class="section-title fade-in">Certifications</h2>
-                    <div class="cert-card slide-in-right">
-                        <i class="fas fa-certificate"></i>
-                        <div>
-                            <h4>Learn DevOps - The Complete Kubernetes Course</h4>
-                            <p>Udemy - 2025</p>
-                        </div>
-                    </div>
-                    <div class="cert-card slide-in-right">
-                        <i class="fas fa-certificate"></i>
-                        <div>
-                            <h4>Oracle Cloud Infrastructure 2025 AI Foundations Associate</h4>
-                            <p>Oracle - 2025</p>
-                        </div>
-                    </div>
+                <p class="extra-desc">Participated in community outreach programs including cleanliness drives and
+                    awareness campaigns. Assisted in organizing events, improving teamwork, leadership, and
+                    communication skills while making a positive impact on society.</p>
+                <div class="extra-tags">
+                    <span class="tech-tag">Leadership</span>
+                    <span class="tech-tag">Community Service</span>
+                    <span class="tech-tag">Teamwork</span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact">
         <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
-            <p class="contact-subtitle fade-in">Feel free to reach out for collaborations, opportunities, or just to connect!</p>
-            <div class="contact-info">
-                <div class="contact-item fade-in" id="emailItem">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email <span class="copy-hint"></span></h4>
-                        <span id="emailText">sayan2212005&#64;gmail.com</span>
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-grid">
+
+                <div class="card contact-info-card">
+                    <h3>Contact Information</h3>
+                    <div class="contact-list">
+                        <a href="mailto:sayan2212005@gmail.com" class="contact-item" style="text-decoration: none;">
+                            <i class="fas fa-envelope"></i>
+                            <span>sayan2212005@gmail.com</span>
+                        </a>
+                        <a href="https://github.com/SayanDcodeR" target="_blank" class="contact-item"
+                            style="text-decoration: none;">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Profile</span>
+                        </a>
+                        <a href="https://linkedin.com/in/sayan-singha-829925327" target="_blank" class="contact-item"
+                            style="text-decoration: none;">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn Profile</span>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-item fade-in" id="phoneItem">
-                    <i class="fas fa-phone"></i>
-                    <div>
-                        <h4>Phone <span class="copy-hint"></span></h4>
-                        <span>+91 9563136848</span>
-                    </div>
+
+                <div class="card contact-form">
+                    <h3>Send a Message</h3>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Replace 'YOUR_ACCESS_KEY_HERE' with your actual Web3Forms access key -->
+                        <input type="hidden" name="access_key" value="9bb413ef-7727-41c1-ae54-3800a9a83970">
+
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" placeholder="Your Message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
                 </div>
-                <div class="contact-item fade-in">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Kolkata, West Bengal</p>
-                    </div>
-                </div>
-                <div class="contact-item fade-in">
-                    <i class="fab fa-linkedin"></i>
-                    <div>
-                        <h4>LinkedIn</h4>
-                        <a href="https://linkedin.com/in/sayan-singha-829925327" target="_blank">linkedin.com/in/sayan-singha-829925327</a>
-                    </div>
-                </div>
+
             </div>
-            <div class="toast" id="toast">Copied to clipboard!</div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Sayan Singha. All rights reserved.</p>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text">
+                &copy; 2026 Sayan Singha. All rights reserved.
+            </div>
+            <div class="footer-socials">
+                <a href="mailto:sayan2212005@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/SayanDcodeR" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/sayan-singha-829925327" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
+            </div>
         </div>
     </footer>
 
+    <!-- Background Animation Script -->
     <script>
-    // 1. DARK MODE
-    var themeBtn  = document.getElementById('themeBtn');
-    var themeIcon = document.getElementById('themeIcon');
-    var htmlEl    = document.documentElement;
-    function applyTheme(t) {
-        htmlEl.setAttribute('data-theme', t);
-        localStorage.setItem('ss-theme', t);
-        themeIcon.className = (t === 'dark') ? 'fas fa-sun' : 'fas fa-moon';
-    }
-    applyTheme(localStorage.getItem('ss-theme') || 'light');
-    themeBtn.addEventListener('click', function() {
-        applyTheme(htmlEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
-    });
+        const canvas = document.getElementById('bg-canvas');
+        const ctx = canvas.getContext('2d');
 
-    // 2. HAMBURGER
-    var hamburger = document.getElementById('hamburger');
-    var navLinks  = document.getElementById('navLinks');
-    hamburger.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-    navLinks.querySelectorAll('a').forEach(function(a) {
-        a.addEventListener('click', function() {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
+        let width, height;
+        let particles = [];
 
-    // 3. SCROLL PROGRESS
-    window.addEventListener('scroll', function() {
-        var st = document.documentElement.scrollTop || document.body.scrollTop;
-        var sh = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        document.getElementById('scrollProgress').style.width = (sh > 0 ? (st/sh)*100 : 0) + '%';
-    });
-
-    // 4. STICKY NAV + ACTIVE LINKS + BACK TO TOP
-    var navbar     = document.getElementById('navbar');
-    var sections   = document.querySelectorAll('section[id]');
-    var navLinkEls = document.querySelectorAll('.nav-link');
-    window.addEventListener('scroll', function() {
-        var scrollY = window.scrollY;
-        navbar.classList.toggle('scrolled', scrollY > 10);
-        document.getElementById('backToTop').classList.toggle('visible', scrollY > 400);
-        var current = '';
-        sections.forEach(function(sec) {
-            if (scrollY >= sec.offsetTop - 100) current = sec.getAttribute('id');
-        });
-        navLinkEls.forEach(function(link) {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) link.classList.add('active');
-        });
-    });
-
-    // 5. BACK TO TOP
-    document.getElementById('backToTop').addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // 6. TYPING EFFECT
-    var phrases   = ['B.Tech CSE Student','Full Stack Developer','MERN Stack Developer','DSA Enthusiast'];
-    var typedEl   = document.getElementById('typedText');
-    var phraseIdx = 0, charIdx = 0, deleting = false;
-    function type() {
-        var current = phrases[phraseIdx];
-        if (!deleting) {
-            typedEl.textContent = current.slice(0, ++charIdx);
-            if (charIdx === current.length) { deleting = true; setTimeout(type, 1800); return; }
-        } else {
-            typedEl.textContent = current.slice(0, --charIdx);
-            if (charIdx === 0) { deleting = false; phraseIdx = (phraseIdx + 1) % phrases.length; }
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
         }
-        setTimeout(type, deleting ? 60 : 100);
-    }
-    type();
 
-    // 7. SCROLL REVEAL
-    var revealEls = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right');
-    var io = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 0.5;
+                this.vy = (Math.random() - 0.5) * 0.5;
+                this.radius = Math.random() * 1.5 + 0.5;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > width) this.vx = -this.vx;
+                if (this.y < 0 || this.y > height) this.vy = -this.vy;
+            }
+
+            draw() {
+                const isLight = document.documentElement.classList.contains('light-mode');
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+                ctx.fillStyle = isLight ? 'rgba(2, 132, 199, 0.5)' : 'rgba(6, 182, 212, 0.5)';
+                ctx.fill();
+            }
+        }
+
+        for (let i = 0; i < 100; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            const isLight = document.documentElement.classList.contains('light-mode');
+
+            // Draw a subtle glowing orb in the center
+            const gradient = ctx.createRadialGradient(width / 2, height / 2, 0, width / 2, height / 2, 600);
+            if (isLight) {
+                gradient.addColorStop(0, 'rgba(2, 132, 199, 0.05)');
+                gradient.addColorStop(1, 'rgba(248, 250, 252, 0)');
+            } else {
+                gradient.addColorStop(0, 'rgba(6, 182, 212, 0.08)');
+                gradient.addColorStop(1, 'rgba(11, 17, 33, 0)');
+            }
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+
+            // Draw lines between close particles
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 150) {
+                        ctx.beginPath();
+                        const alpha = 0.2 * (1 - distance / 150);
+                        ctx.strokeStyle = isLight ? `rgba(2, 132, 199, ${alpha})` : `rgba(6, 182, 212, ${alpha})`;
+                        ctx.lineWidth = 1;
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+
+        // Active link switching
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current) && current !== '') {
+                    link.classList.add('active');
+                }
+            });
         });
-    }, { threshold: 0.1 });
-    revealEls.forEach(function(el) { io.observe(el); });
 
-    // 8. COPY TO CLIPBOARD
-    function copyText(text, el) {
-        navigator.clipboard.writeText(text).then(function() {
-            var toast = document.getElementById('toast');
-            toast.classList.add('show');
-            el.classList.add('copied');
-            setTimeout(function() { toast.classList.remove('show'); el.classList.remove('copied'); }, 2000);
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.documentElement.classList.toggle('light-mode');
+
+            if (document.documentElement.classList.contains('light-mode')) {
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+            } else {
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+            }
         });
-    }
-    document.getElementById('emailItem').addEventListener('click', function() {
-        copyText(document.getElementById('emailText').textContent, this);
-    });
-    document.getElementById('phoneItem').addEventListener('click', function() {
-        copyText('+919563136848', this);
-    });
-
-    // 9. SKILL TAG POP
-    document.querySelectorAll('.skill-tag').forEach(function(tag) {
-        tag.addEventListener('click', function() {
-            tag.classList.add('popped');
-            setTimeout(function() { tag.classList.remove('popped'); }, 300);
-        });
-    });
-
-    // 10. PHOTO FALLBACK - show initials if no photo
-    var heroPhoto = document.getElementById('heroPhoto');
-    var heroInitials = document.getElementById('heroInitials');
-    if (!heroPhoto.src || heroPhoto.src === window.location.href) {
-        heroPhoto.style.display = 'none';
-        heroInitials.style.display = 'flex';
-    }
     </script>
 </body>
+
 </html>
